@@ -14,7 +14,7 @@ trails.each do |trail|
     lat = point.xpath('@lat').to_s.to_f
     lon = point.xpath('@lat').to_s.to_f
     ele = point.text.strip.to_f
-    Node.create!(trail_id: trail[:id], latitude: lat,
+    Node.create!(trail_id: trail[:trail_id], latitude: lat,
                 longitude: lon, elevation: ele)
     puts "Created Node #{Node.last.id}"
   end
