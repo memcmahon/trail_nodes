@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20180529200416) do
 
   create_table "nodes", force: :cascade do |t|
     t.integer "trail_id"
-    t.integer "latitude"
-    t.integer "longitude"
-    t.integer "elevation"
+    t.float "latitude"
+    t.float "longitude"
+    t.float "elevation"
   end
 
 end
