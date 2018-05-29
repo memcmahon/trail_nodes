@@ -2,7 +2,7 @@ require 'nokogiri'
 
 Node.destroy_all
 
-trails = [{file_name: "sky-pond.gpx", trail_id: 7002941},
+trails = [{file_name: "sky-pond.gpx", trail_id: 7002175},
           {file_name: "emerald-lake.gpx", trail_id: 7000276}]
 
 trails.each do |trail|
