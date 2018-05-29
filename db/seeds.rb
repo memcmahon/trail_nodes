@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'nokogiri'
+
+Node.destroy_all
+
+trails = [{file_name: "sky-pond.gpx", trail_id: 7002941},
+          {file_name: "emerald-lake.gpx", trail_id: 7000276}]
+
+trails.each do |trail|
+  path = File.expand_path("../xml_files/#{trail[:file_name]}", __FILE__)
+  doc = Nokogiri::XML(open(path))
+  points = doc.xpath('//xmlns:trkpt')
+
+  points.each do |point|
+    lat = point.xpath('@lat').to_s.to_f
+    lon = point.xpath('@lat').to_s.to_f
+    ele = point.text.strip.to_f
+    Node.create!(trail_id: trail[:id], latitude: lat,
+                longitude: lon, elevation: ele)
+    puts "Created Node #{Node.last.id}"
+  end
+end
