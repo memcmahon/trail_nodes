@@ -242,6 +242,18 @@ trails = [{file_name: "sky-pond.gpx", trail_id: 7002175},
           {file_name: "nightbird-gulch.gpx", trail_id: 7017747},
           {file_name: "goshawk-ridge.gpx", trail_id: 7004845},
           {file_name: "wild-basin-trail.gpx", trail_id: 7001020},
+          {file_name: "balanced-rock-trail.gpx", trail_id: 7000280},
+          {file_name: "mile-high-loop.gpx", trail_id: 7013004},
+          {file_name: "meadow-view-trail.gpx", trail_id: 7007018},
+          {file_name: "wild-turkey-trail.gpx", trail_id: 7005492},
+          {file_name: "maverick.gpx", trail_id: 7001677},
+          {file_name: "ginny-trail.gpx", trail_id: 7034928},
+          {file_name: "american-bison-trail.gpx", trail_id: 7023277},
+          {file_name: "lakeshore-perimeter-9075.gpx", trail_id: 7036557},
+          {file_name: "clear-creek-trail-miller-trailhead-to-bass-lake.gpx", trail_id: 7028930},
+          {file_name: "nelson-loop.gpx", trail_id: 7010951},
+          {file_name: "east-boulder-teller-lake.gpx", trail_id: 7001538},
+          {file_name: "wathen-trail.gpx", trail_id: 7003318},
          ]
 
 trails.each do |trail|
